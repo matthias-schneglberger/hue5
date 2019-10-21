@@ -17,12 +17,16 @@ public class Main {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        System.out.println("RSAEngine");
+        System.out.println("unverschluesselt || nach der versclüsselung");
+       
+        
         RSAEngine rsa = new RSAEngine(11, 23);
         
-        BigInteger encryptedInt = rsa.encryptNumber(4711);
+        BigInteger encryptedInt = rsa.encryptNumber(47);
         int decryptedInt = rsa.decryptNumber(encryptedInt).intValue();
         
-        System.out.println("4711 || " + decryptedInt);
+        System.out.println("47 || " + decryptedInt);
         
         
         BigInteger encryptedChar = rsa.encryptChar((char)65);
@@ -31,10 +35,10 @@ public class Main {
         System.out.println("A" + " || " + decryptedChar);
         
         
-        BigInteger[] encryptedString = rsa.encryptString("HTL-Grieskirchen");
+        BigInteger[] encryptedString = rsa.encryptString("HTL-GRIESKIRCHEN");
         String decryptedString = rsa.decryptString(encryptedString);
         
-        System.out.println("HTL-Grieskirchen || " + decryptedString);
+        System.out.println("HTL-GRIESKIRCHEN || " + decryptedString);
     }
     
 }
