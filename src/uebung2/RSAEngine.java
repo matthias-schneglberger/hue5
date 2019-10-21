@@ -47,7 +47,7 @@ public class RSAEngine {
     }
     
     public BigInteger encryptChar(char plain){
-        BigInteger plainInt = new BigInteger(String.valueOf(plain));
+        BigInteger plainInt = new BigInteger(String.valueOf((int)plain));
         return plainInt.modPow(e, getN());
     }
     
