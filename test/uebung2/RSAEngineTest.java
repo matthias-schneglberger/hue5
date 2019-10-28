@@ -68,6 +68,18 @@ public class RSAEngineTest {
         assertTrue(expected.equals(real));
         
     }
+    
+    @Test
+    public void testIsSomethingOther(){
+        RSAEngine rsa = new RSAEngine(11, 23);
+        System.out.println("is somthing other");
+        
+        int expectedInt = 47;
+        
+        int realInt = rsa.encryptNumber(expectedInt).intValue();
+        
+        assertNotEquals(expectedInt, realInt);
+    }
 
     
 }

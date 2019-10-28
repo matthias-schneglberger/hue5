@@ -70,9 +70,8 @@ public class RSAEngine {
     public String decryptString(BigInteger[] encrypted){
         String finalStr = "";
         
-        for(int i = 0; i < encrypted.length; i++){
-            finalStr += decryptChar(encrypted[i]);
-            
+        for (BigInteger encrypted1 : encrypted) {
+            finalStr += decryptChar(encrypted1);
         }
         
         return finalStr;
